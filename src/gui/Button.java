@@ -1,5 +1,4 @@
 package gui;
-
 public class Button {
 
     private int x, y, width, height;

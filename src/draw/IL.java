@@ -10,5 +10,7 @@ public class IL {
     public static Image iastroid_i = new Image("file:rsc/astroid_i.jpg");
     public static Image ischuss = new Image("file:rsc/schuss.png");
     public static Image iiridium = new Image("file:rsc/iridium.png");
+    public static Image ihealth = new Image("file:rsc/health.png");
+
 
 }

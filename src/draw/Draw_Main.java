@@ -14,6 +14,7 @@ import gui.Gui;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import java.text.DecimalFormat;
@@ -115,7 +116,32 @@ public class Draw_Main {
                 g.drawImage(IL.iiridium, b.getX3(), b.getY1() + IL.iiridium.getHeight() / 4 + 3, 22, 22);
 
             }
+
+            g.setStroke(Color.WHITE);
+            g.setFill(new Color(39. / 255, 147. / 255, 96. / 255, 1));
+            for (int i = 0; i < Gui.rectangles.length; i++){
+                for (int y = 0; y < Gui.rectangles[i].length; y++){
+                    g.strokeRect(Gui.rectangles[i][y].getX(), Gui.rectangles[i][y].getY(), Gui.rectangles[i][y].getWidth(), Gui.rectangles[i][y].getHeight());
+                }
+            }
+
         }
+
+
+        g.setStroke(Color.WHITE);
+        g.strokeLine(0, 50, 300, 50);
+        g.strokeLine(300, 50, 325, 0);
+
+        g.strokeLine(Gui.width - 300, 50, Gui.width, 50);
+        g.strokeLine(Gui.width - 325, 50, Gui.width - 300, 50);
+
+        g.drawImage(IL.iiridium, 15, 15, 20, 20);
+
+        g.setFill(Color.WHITE);
+        g.fillText(df.format(Player.iridium), 50, 34);
+
+        g.drawImage(IL.ihealth, Gui.width - 290, 12, 25, 25);
+        g.fillText(df.format(Player.health), Gui.width - 290, 34);
 
 
         if (Gamestate.state == Gamestate_e.pause){
@@ -136,7 +162,7 @@ public class Draw_Main {
                 g.setFill(Color.WHITE);
 
                 text.setText(b.getText());
-                text.setFont(Font.font("Veranda", 25));
+                text.setFont(Font.font("Verdana",25));
 
                 g.fillText(b.getText(), b.getX() + b.getWidth()/2 - text.getLayoutBounds().getWidth()/2, b.getY() + b.getHeight()/2 + text.getLayoutBounds().getHeight()/4);
             }

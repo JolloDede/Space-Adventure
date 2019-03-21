@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -15,13 +16,15 @@ public class Gui {
 
     public static Draw_Main dm;
 
-    public static int width = 1080, height = 620;
+    public static int width = 1080, height = 720;
     public static GraphicsContext gc_main;
 
     public static Button[] buttons = new Button[3];
     public static Button_angled[] button_angleds = new Button_angled[6];
 
     public static Rectangle[][] rectangles = new Rectangle[button_angleds.length][5];
+
+    Font font = new Font(40);
 
 
     public void init(){
@@ -37,7 +40,7 @@ public class Gui {
         buttons[2].setText("Beenden");
 
         for (int i = 1; i < 4; i++){
-            button_angleds[i-1] = new Button_angled(100, i+150, width/3, 50);
+            button_angleds[i-1] = new Button_angled(100, i*150, width/3, 50);
             button_angleds[i+2] = new Button_angled(100 + width/2, i*150, width/3, 50);
         }
 
