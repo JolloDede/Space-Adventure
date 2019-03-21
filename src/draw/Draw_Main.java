@@ -94,8 +94,29 @@ public class Draw_Main {
                     g.fillPolygon(xpoints2, ypoints2, 4);
 
                 }
+
+                //links
+                g.strokeLine(b.getX1(), b.getY1(), b.getX2(), b.getY1());
+                g.strokeLine(b.getX1(), b.getY2(), b.getX5(), b.getY2());
+
+                g.strokeLine(b.getX1(), b.getY1(), b.getX1(), b.getY2());
+                g.strokeLine(b.getX2(), b.getY1(), b.getX5(), b.getY2());
+
+                g.setFill(Color.WHITE);
+                g.fillText(b.getText(), b.getX1() + 25, b.getY1() + 32);
+
+                //rechts
+                g.strokeLine(b.getX3(), b.getY1(), b.getX4(), b.getY1());
+                g.strokeLine(b.getX6(), b.getY2(), b.getX4(), b.getY2());
+
+                g.strokeLine(b.getX3(), b.getY1(), b.getX3(), b.getY2());
+                g.strokeLine(b.getX3(), b.getY1(), b.getX6(), b.getY2());
+
+                g.drawImage(IL.iiridium, b.getX3(), b.getY1() + IL.iiridium.getHeight() / 4 + 3, 22, 22);
+
             }
         }
+
 
         if (Gamestate.state == Gamestate_e.pause){
             g.setFill(new Color(0, 0, 0, 0.5));
@@ -112,13 +133,12 @@ public class Draw_Main {
                     g.fillRect(b.getX(), b.getY(), b.getWidth(), b.getHeight());
                 }
 
+                g.setFill(Color.WHITE);
+
                 text.setText(b.getText());
                 text.setFont(Font.font("Veranda", 25));
 
                 g.fillText(b.getText(), b.getX() + b.getWidth()/2 - text.getLayoutBounds().getWidth()/2, b.getY() + b.getHeight()/2 + text.getLayoutBounds().getHeight()/4);
-
-                g.setFill(Color.WHITE);
-
             }
         }
     }

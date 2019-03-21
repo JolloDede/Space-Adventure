@@ -1,6 +1,8 @@
 package clocks;
 
 import chars.Asteroid;
+import game.Gamestate;
+import game.Gamestate_e;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -18,7 +20,9 @@ public class Asteroid_Creation {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                asteroids.add(new Asteroid());
+                if (Gamestate.state == Gamestate_e.ingame){
+                    asteroids.add(new Asteroid());
+                }
             }
         }, delay, period);
     }

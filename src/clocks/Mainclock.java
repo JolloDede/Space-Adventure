@@ -29,7 +29,6 @@ public class Mainclock {
 
 
                 } catch (Exception e) {
-                    e.printStackTrace();
                     System.out.println("Main timer error");
                 }
             }
