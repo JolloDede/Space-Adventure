@@ -14,7 +14,6 @@ import gui.Gui;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import java.text.DecimalFormat;
@@ -27,6 +26,8 @@ public class Draw_Main {
     public void draw(GraphicsContext g){
         g.setFill(Color.BLACK);
         g.fillRect(0 ,0 , Gui.width,Gui.height);
+        g.setFont(Font.font("Verdana", 25));
+
 
         g.setFill(Color.WHITE);
         for (int i = 0; i < Star_Movement.stars.size(); i++){
@@ -78,7 +79,7 @@ public class Draw_Main {
             g.strokeLine(Gui.width/2, 0, Gui.width/2, Gui.height);
 
             g.setFill(Color.WHITE);
-            g.setFont(Font.font("Veranda", 20));
+            g.setFont(Font.font("Veranda", 25));
 
             int temp0;
             for (Button_angled b : Gui.button_angleds){
@@ -96,7 +97,7 @@ public class Draw_Main {
 
                 }
 
-                //links
+                //links Kaufen
                 g.strokeLine(b.getX1(), b.getY1(), b.getX2(), b.getY1());
                 g.strokeLine(b.getX1(), b.getY2(), b.getX5(), b.getY2());
 
@@ -106,7 +107,7 @@ public class Draw_Main {
                 g.setFill(Color.WHITE);
                 g.fillText(b.getText(), b.getX1() + 25, b.getY1() + 32);
 
-                //rechts
+                //rechts Kaufen
                 g.strokeLine(b.getX3(), b.getY1(), b.getX4(), b.getY1());
                 g.strokeLine(b.getX6(), b.getY2(), b.getX4(), b.getY2());
 
@@ -163,6 +164,7 @@ public class Draw_Main {
 
                 text.setText(b.getText());
                 text.setFont(Font.font("Verdana",25));
+                g.setFont(Font.font("Verdana", 25));
 
                 g.fillText(b.getText(), b.getX() + b.getWidth()/2 - text.getLayoutBounds().getWidth()/2, b.getY() + b.getHeight()/2 + text.getLayoutBounds().getHeight()/4);
             }

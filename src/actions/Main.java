@@ -3,7 +3,7 @@ package actions;
 import chars.Player;
 import clocks.Asteroid_Creation;
 import clocks.Bullet_Creation;
-import clocks.Mainclock;
+import clocks.GameLoop;
 import clocks.Star_Movement;
 import gui.Gui;
 import javafx.application.Application;
@@ -21,7 +21,7 @@ public class Main extends Application {
 
         new Player();
 
-        new Mainclock();
+        new Thread(new GameLoop()).start();
         Asteroid_Creation.start();
         new Bullet_Creation();
         new Star_Movement();

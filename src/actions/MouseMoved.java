@@ -1,6 +1,8 @@
 package actions;
 
 import chars.Player;
+import clocks.Collision;
+import gui.Gui;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
@@ -10,5 +12,21 @@ public class MouseMoved implements EventHandler<MouseEvent> {
     public void handle(MouseEvent e) {
 
         Player.move((int)e.getX());
+
+        for (int i = 0; i < Gui.buttons.length; i++){
+            if (Collision.cButton(Gui.buttons[i], (int)e.getX(), (int)e.getY())){
+                Gui.buttons[i].setHover(true);
+            }else{
+                Gui.buttons[i].setHover(false);
+            }
+        }
+
+        for (int i = 0; i < Gui.button_angleds.length; i++){
+            if (Collision.cButton_angled(Gui.button_angleds[i], (int)e.getX(), (int)e.getY())){
+                Gui.button_angleds[i].setHover(true);
+            }else{
+                Gui.button_angleds[i].setHover(false);
+            }
+        }
     }
 }

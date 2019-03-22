@@ -16,15 +16,13 @@ public class Gui {
 
     public static Draw_Main dm;
 
-    public static int width = 1080, height = 720;
+    public static int width = 1280, height = 720;
     public static GraphicsContext gc_main;
 
     public static Button[] buttons = new Button[3];
     public static Button_angled[] button_angleds = new Button_angled[6];
 
     public static Rectangle[][] rectangles = new Rectangle[button_angleds.length][5];
-
-    Font font = new Font(40);
 
 
     public void init(){
@@ -63,7 +61,7 @@ public class Gui {
                 rectangles[i][ii] = new Rectangle(100+ii*20, 210+temp2 * 150, 10, 10);
 
                 if (temp){
-                    rectangles[i][ii] = new Rectangle(100 + width/2 * ii * 20, 210 + temp2 * 150, 10, 10);
+                    rectangles[i][ii] = new Rectangle(100 + width/2 + ii * 20, 210 + temp2 * 150, 10, 10);
                 }
             }
             temp2++;
