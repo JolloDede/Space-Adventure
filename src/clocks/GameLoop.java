@@ -7,10 +7,16 @@ import gui.Gui;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * this resets what we see and sets how fast the game plays
+ */
 public class GameLoop implements Runnable{
 
     private boolean running = true;
 
+    /**
+     * this overrides run from Runnable it looks how fast the game gets painted
+     */
     @Override
     public void run() {
 
@@ -42,6 +48,9 @@ public class GameLoop implements Runnable{
 
     }
 
+    /**
+     * this makes the game thingis move
+     */
     public void update(){
         if (Gamestate.state == Gamestate_e.ingame){
             Star_Movement.move();
@@ -51,6 +60,9 @@ public class GameLoop implements Runnable{
         }
     }
 
+    /**
+     * this render the things we see
+     */
     public void render(){
         Gui.gc_main.clearRect(0, 0, Gui.width, Gui.height);
         Gui.dm.draw(Gui.gc_main);

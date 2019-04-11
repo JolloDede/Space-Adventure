@@ -64,7 +64,7 @@ public class Draw_Main {
         }
 
         for (Bullet b : Bullet_Creation.bullets){
-            //g.drawImage(IL.ischuss, b.getX(), b.getY(), b.getWidth(), b.getHeight());
+            g.drawImage(IL.ischuss, b.getX(), b.getY(), b.getWidth(), b.getHeight());
 
             g.setStroke(Color.GREEN);
             g.strokeRect(b.getX(), b.getY(), b.getWidth(), b.getHeight());
