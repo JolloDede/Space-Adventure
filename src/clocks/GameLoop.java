@@ -9,6 +9,9 @@ import java.util.TimerTask;
 
 /**
  * this resets what we see and sets how fast the game plays
+ * @author Dennis
+ * @since
+ * @version
  */
 public class GameLoop implements Runnable{
 
