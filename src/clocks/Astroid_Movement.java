@@ -2,8 +2,17 @@ package clocks;
 
 import gui.Gui;
 
+/**
+ * Astreroid Movement describe how the Asteroids move
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class Astroid_Movement {
 
+    /**
+     * AstroidMovement takes the Astroids from Creation and moves them down with their speed
+     */
     public static void move(){
 
         for (int i = 0; i<Asteroid_Creation.asteroids.size(); i++){

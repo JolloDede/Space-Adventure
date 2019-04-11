@@ -6,8 +6,18 @@ import gui.Gui;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * This class Handles the Mousemoved event
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class MouseMoved implements EventHandler<MouseEvent> {
 
+    /**
+     * This method handles the Event mouseMoved
+     * @param e
+     */
     @Override
     public void handle(MouseEvent e) {
 

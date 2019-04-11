@@ -8,15 +8,22 @@ import gui.Gui;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * this class handles the MousePressed event
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class MousePressed implements EventHandler<MouseEvent> {
 
+    /**
+     * this method handles the MousePressed event
+     * @param e
+     */
     @Override
     public void handle(MouseEvent e) {
 
-        if (Gamestate.state == Gamestate_e.ingame){
-            Player.isShootingfalse  = true;
-        }
-
+        // case for every gamestate shop has not button colision
         switch (Gamestate.state){
             case ingame:
                 Player.isShootingfalse = true;

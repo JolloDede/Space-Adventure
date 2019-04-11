@@ -1,9 +1,25 @@
 package chars;
 
+/**
+ * This class describes the bullets which get fired out of my rocat
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class Bullet {
 
     private int x, y, width, height, speed;
 
+    /**
+     * The Bullets get created  with a place
+     * @param x
+     * @param y
+     * a width and a hight
+     * @param width
+     * @param height
+     * and a speed
+     * @param speed
+     */
     public Bullet(int x, int y, int width, int height, int speed) {
         this.x = x;
         this.y = y;

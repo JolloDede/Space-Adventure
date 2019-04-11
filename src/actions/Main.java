@@ -9,10 +9,22 @@ import gui.Gui;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+/**
+ * Main Class only for starting everything
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class Main extends Application {
 
     Gui g = new Gui();
 
+    /**
+     * This method starts the GUI gets a
+     * @param primaryStage
+     * and throws the exceptions
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
 

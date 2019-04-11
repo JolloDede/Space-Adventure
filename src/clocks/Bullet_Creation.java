@@ -9,11 +9,20 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * This class creates Bullets infront of the Player
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class Bullet_Creation {
 
     public static ArrayList<Bullet> bullets = new ArrayList<>();
     public static Timer timer;
 
+    /**
+     * if the Player is shooting true every 200 ms a bullet gets greated
+     */
     public Bullet_Creation(){
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {

@@ -3,12 +3,21 @@ package chars;
 import data.CustomMath;
 import gui.Gui;
 
+/**
+ * In this class i describe the Asteroids
+ * @author Dennis
+ * @since
+ * @version
+ */
 public class Asteroid {
 
     private  int x, y, width, height, health, currenthealth, speed;
     private boolean isHit = false, containsIridium;
     private int value = 0;
 
+    /**
+     * Here the asteroids get initialized with a size andmaybe iridium and health adn a place where it spawns
+     */
     public Asteroid(){
         int ratio = CustomMath.limit((int)(Math.random()*200)+50, 50, 200);
         int rnd = (int)(Math.random()*10)+1;

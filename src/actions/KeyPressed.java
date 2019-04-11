@@ -5,8 +5,15 @@ import game.Gamestate_e;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 
+/**
+ * This Class handels the event Keypressed
+ */
 public class KeyPressed implements EventHandler<KeyEvent> {
 
+    /**
+     * This method handels onyl the Escape key
+     * @param e is the KeyEvent
+     */
     @Override
     public void handle(KeyEvent e) {
 
